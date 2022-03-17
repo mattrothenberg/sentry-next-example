@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Home() {
   const breakTheWorld = () => {
-    throw new Error("Oh no you broke the world!");
+    throw new Error("Oh no you broke the world! You are bad!");
   };
   return (
     <div>

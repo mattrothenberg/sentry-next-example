@@ -21,4 +21,4 @@ jobs:
         with:
           http_url: https://sentry.io/api/0/projects/mroth/mroth/events/
           downloaded_filename: sentry-data.json
-          authorization: "Bearer ${{secrets.SENTRY_KEY}}""
+          authorization: "Bearer ${{secrets.SENTRY_KEY}}"

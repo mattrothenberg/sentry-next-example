@@ -4,6 +4,11 @@ export default function Home() {
   const breakTheWorld = () => {
     throw new Error("Oh no you broke the world!");
   };
+  const randomError = () => {
+    if (Math.random() < 0.5) {
+      throw new Error("Bad luck, you lose!");
+    }
+  };
   return (
     <div>
       <Head>
@@ -17,6 +22,12 @@ export default function Home() {
           className="bg-black text-white p-4 font-bold"
         >
           Break the world
+        </button>
+        <button
+          onClick={randomError}
+          className="bg-black text-white p-4 font-bold"
+        >
+          Random Error
         </button>
       </main>
     </div>

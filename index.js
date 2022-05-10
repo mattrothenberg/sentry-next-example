@@ -1,1 +1,1 @@
-console.log("hello world");
+console.log(process.env.SENTRY_KEY.length);

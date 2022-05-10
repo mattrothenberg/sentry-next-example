@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sentry": "node index.js"
   },
   "dependencies": {
-    "@actions/core": "^1.8.0",
-    "@actions/github": "^5.0.1",
     "@sentry/nextjs": "^6.18.1",
     "next": "12.1.0",
     "react": "17.0.2",

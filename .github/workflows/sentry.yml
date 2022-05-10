@@ -2,7 +2,9 @@ name: Fetch Sentry Issues
 
 on:
   workflow_dispatch:
-
+    inputs:
+        filename:
+          description: 'Name of file'
 jobs:
   deploy:
     runs-on: ubuntu-latest

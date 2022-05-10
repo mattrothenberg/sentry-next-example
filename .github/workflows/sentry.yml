@@ -1,4 +1,5 @@
 name: "Fetch Sentry Issues"
+on: workflow_dispatch
 description: "Fetches sentry issues for a given file"
 inputs:
   filename:

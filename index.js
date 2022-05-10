@@ -43,19 +43,19 @@ async function fetchIssueEvents(issue, token) {
 }
 
 async function main() {
-  const sentryBaseUrl = `https://sentry.io/api/0/projects/${org}/${project}/`;
-  const issuesUrl = `${sentryBaseUrl}issues`;
-  const issuesParams = new URLSearchParams({
-    query: `stack.filename:./${filename} is:unresolved`,
+  const sentryBaseUrl = `https://sentry.io/api/0/projects/${org}/${project}/issues/`;
+
+  const params = new URLSearchParams({
+    query: `stack.filename:./${filename}`,
   });
 
-  const res = await fetch(issuesUrl + issuesParams.toString(), {
+  const res = await fetch(sentryBaseUrl + `?` + params.toString(), {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
 
-  const issues = await res.json();
+  let issues = await res.json();
 
   if (!issues || issues.length === 0) {
     return null;
@@ -66,4 +66,8 @@ async function main() {
   );
 }
 
-main();
+try {
+  main();
+} catch (e) {
+  console.log(e);
+}

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sentry": "node index.js --experimental-fetch"
+    "sentry": "node --experimental-fetch index.js"
   },
   "dependencies": {
     "@sentry/nextjs": "^6.18.1",

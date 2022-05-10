@@ -1,1 +1,1 @@
-console.log(process.env.SENTRY_KEY.length);
+console.log(process.env.TOKEN.length);

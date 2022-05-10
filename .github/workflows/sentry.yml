@@ -14,6 +14,8 @@ jobs:
           node-version: "16.x"
       - name: exec
         run: |
-          yarn sentry
+          touch .env
+          echo TOKEN=$TOKEN >> .env
+          npm run sentry
         env:
-          token: ${{ secrets.SENTRY_KEY }}
+          TOKEN: ${{ secrets.SENTRY_KEY }}

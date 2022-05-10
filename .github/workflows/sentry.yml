@@ -3,8 +3,8 @@ name: Fetch Sentry Issues
 on:
   workflow_dispatch:
     inputs:
-        filename:
-          description: 'Name of file'
+      filename:
+        description: "Name of file"
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,6 +18,8 @@ jobs:
         run: |
           touch .env
           echo TOKEN=$TOKEN >> .env
+          echo FILENAME=$FILENAME >> .env
           npm run sentry
         env:
           TOKEN: ${{ secrets.SENTRY_KEY }}
+          FILENAME: ${{ github.event.inputs.filename }}

@@ -15,5 +15,5 @@ jobs:
       - name: exec
         run: |
           yarn sentry
-        with:
+        env:
           token: ${{ secrets.SENTRY_KEY }}

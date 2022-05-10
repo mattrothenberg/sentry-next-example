@@ -1,0 +1,12 @@
+name: "Fetch Sentry Issues"
+description: "Fetches sentry issues for a given file"
+inputs:
+  filename:
+    description: "Filename"
+    required: true
+outputs:
+  issues: # id of output
+    description: "Issues associated with file"
+runs:
+  using: "node16"
+  main: "index.js"

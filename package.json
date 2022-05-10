@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@actions/core": "^1.8.0",
+    "@actions/github": "^5.0.1",
     "@sentry/nextjs": "^6.18.1",
     "next": "12.1.0",
     "react": "17.0.2",
